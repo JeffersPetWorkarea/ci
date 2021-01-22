@@ -7,4 +7,5 @@ LABEL "com.github.actions.color"="red"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN sudo apt-get update && apt-get install -y git
 ENTRYPOINT ["/entrypoint.sh"]
