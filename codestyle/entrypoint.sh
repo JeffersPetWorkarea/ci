@@ -11,3 +11,5 @@ fi
 
 gem install tailor
 sh -c "tailor ${INPUT_ARGS}"
+
+sh -c "bundle exec rubocop"
