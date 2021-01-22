@@ -7,5 +7,5 @@ LABEL "com.github.actions.color"="red"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN apt-get update && apt-get install -y build-essential git
+RUN apt-get update && apt-get install -y build-essential git nodejs
 ENTRYPOINT ["/entrypoint.sh"]
