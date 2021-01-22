@@ -1,0 +1,6 @@
+name: 'Run Rspec'
+description: 'Runs Rspec.'
+author: 'Ben Crouse'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
