@@ -11,4 +11,4 @@ fi
 
 gem install bundler -v 1.9.0
 gem install bundler-audit
-sh -c "bundler-audit check ${INPUT_ARGS}"
+bundler-audit check $INPUT_ARGS
