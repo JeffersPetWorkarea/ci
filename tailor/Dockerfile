@@ -5,5 +5,6 @@ LABEL "com.github.actions.description"="Run bundler-audit, patch-level verificat
 LABEL "com.github.actions.icon"="circle"
 LABEL "com.github.actions.color"="red"
 
+RUN chmod +x entrypoint.sh
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
