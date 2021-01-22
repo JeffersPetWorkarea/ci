@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.0.0-slim
 
 LABEL "com.github.actions.name"="Run bundler-audit"
 LABEL "com.github.actions.description"="Run bundler-audit, patch-level verification for bundler."
