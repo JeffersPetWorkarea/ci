@@ -10,5 +10,5 @@ if [ -f "Gemfile" ]; then
 fi
 
 gem install bundler -v 1.9.0
-gem install bundler-audit
+gem install bundler-audit -v 0.6.1
 bundler-audit check $INPUT_ARGS
