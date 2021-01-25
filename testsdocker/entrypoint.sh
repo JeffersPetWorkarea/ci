@@ -11,4 +11,4 @@ if [ -f "Gemfile" ]; then
 fi
 
 export RAILS_ENV=test
-rake ci:setup:rspec spec --trace || true
+rake ci:setup:rspec ./spec/controllers/admin/blog_entries_controller_spec.rb --trace || true
