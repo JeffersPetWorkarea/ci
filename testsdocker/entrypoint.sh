@@ -9,4 +9,4 @@ if [ -f "Gemfile" ]; then
   bundle install --jobs 4 --retry 3
 fi
 
-bundle exec rspec
+rake ci:setup:rspec spec --trace || true
