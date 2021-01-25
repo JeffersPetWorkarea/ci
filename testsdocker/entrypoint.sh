@@ -6,7 +6,8 @@ cd $GITHUB_WORKSPACE
 
 if [ -f "Gemfile" ]; then
   echo "# Bundling..."
-  bundle install --jobs 4 --retry 3
+  bundle install --deployment --jobs 4 --retry 3
 fi
-
+PWD
+export RAILS_ENV=test
 rake ci:setup:rspec spec --trace || true
