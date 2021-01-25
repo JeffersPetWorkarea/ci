@@ -7,5 +7,5 @@ LABEL "com.github.actions.color"="red"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN apt-get update && apt-get install -y build-essential git nodejs imagemagick advancecomp gifsicle jhead jpegoptim libjpeg optipng pngcrush pngquant 
+RUN apt-get update && apt-get install -y build-essential git nodejs imagemagick advancecomp gifsicle jhead jpegoptim optipng pngcrush pngquant 
 ENTRYPOINT ["/entrypoint.sh"]
