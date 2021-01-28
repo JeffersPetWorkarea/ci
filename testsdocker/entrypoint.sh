@@ -12,6 +12,7 @@ fi
 
 export RAILS_ENV=test
 export TZ="/usr/share/zoneinfo/America/New_York"
+echo $ELASTICSEARCH_URL
 curl -XGET 'elasticsearch:9200'
 #bundle exec rspec ./spec/controllers/admin/blog_entries_controller_spec.rb
 bundle exec rake ci:setup:rspec spec --trace
