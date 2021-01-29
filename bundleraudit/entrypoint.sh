@@ -9,6 +9,11 @@ if [ -f "Gemfile" ]; then
   bundle install --jobs 4 --retry 3
 fi
 
-gem install bundler -v 1.9.0
-gem install bundler-audit -v 0.6.1
-bundler-audit check $INPUT_ARGS
+# Setup bundler-audit if needed
+if [ ! `which bundler-audit` ]; then
+  echo "\n# Installing bundler-audit..."
+  gem install -v 0.8.0.rc1 bundler-audit --pre
+fi
+
+echo "\n# Running bundler-audit..."
+sh -c "bundle audit check --update ${INPUT_ARGS}"
